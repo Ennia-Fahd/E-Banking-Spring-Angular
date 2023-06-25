@@ -1,0 +1,24 @@
+<div class="container">
+
+
+<h3> Les comptes client de  {{customer.name}}</h3>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th><th>Status</th><th>Type</th><th>Date</th><th>Balance</th><th>OverDraft/Intérêt<th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let acc of this.customerAccount | async">
+      <td>{{acc.id}}</td>
+      <td>{{acc.status}}</td>
+      <td>{{acc.type}}</td>
+      <td>{{acc.date_createdAt | date : 'dd-MM-yyyy:HH-mm-ss'}}</td>
+      <td>{{acc.balance}}</td>
+      <td *ngIf="acc.interestRate"> {{acc.interestRate}}</td>
+      <td *ngIf="acc.overDraft"> {{acc.overDraft}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

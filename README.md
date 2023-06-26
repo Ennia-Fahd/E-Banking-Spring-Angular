@@ -27,6 +27,7 @@ L'architecture d'un projet Digital Banking avec Spring et Angular implique une i
 Serveur BACKEND 
 
 1-Structure du projet :
+
 ![structureprojetbackend](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/bc4f34b9-5cd2-4e92-95f6-762dd5528bdf)
 
 -Entities (Entités) : Les entités représentent les objets métier de l'application et sont utilisées pour représenter les tables de la base de données. Elles contiennent des attributs et des relations qui décrivent les données de l'application.
@@ -82,7 +83,6 @@ Serveur BACKEND
 
 -->DTOS :
 
-![BankAccountDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/2c8f925d-0c4a-4703-82da-745e0eb48638)
 ![BankAccountDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/fb543ac0-1b1a-4318-b508-9c98862b73f8)
 ![SavingBankAccountDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/3e3cd230-6106-497d-a93c-36fbc83a3a3c)
 ![CustomerDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/bb8b8b89-e9f2-40b8-a4f3-bb4627914748)

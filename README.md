@@ -64,6 +64,60 @@ Serveur BACKEND
 ![BankAccountRep](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/d6ee0161-3589-48e2-b160-a2c936f88358)
 ![AccountOperationRep](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/8c81c981-f478-4637-bd75-59090f721741)
 
+-->Services :
+--Interface BankAccountService :
+
+![BankAccountService](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/6f396808-d446-42f1-8468-cc5c97fec6b8)
+![BankAccountService2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/6297e1b3-4f05-4b69-bbd5-f9c58df55888)
+
+--Class BankAccountServiceImpl : 
+
+![Impl1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/488e34bb-b95e-475a-b961-1f7c5fb20972)
+![Impl2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/b9d2af12-c654-477a-a58c-5585edad3cd2)
+![Impl3](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/64c86cd9-fff3-4626-94bc-ecb85cd2d885)
+![Impl4](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/3d2770d3-1853-490c-bb3f-c93cfc6f2a03)
+![Impl5](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/bb7a4718-7de1-43b2-ba1c-d07a1101c502)
+![Impl6](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/cbb45ecf-57aa-44eb-bc24-1da5d43dd85f)
+![Impl7](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/a1c2a7a8-a452-400a-9300-58f7405476a2)
+
+-->DTOS :
+
+![BankAccountDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/2c8f925d-0c4a-4703-82da-745e0eb48638)
+![BankAccountDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/fb543ac0-1b1a-4318-b508-9c98862b73f8)
+![SavingBankAccountDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/3e3cd230-6106-497d-a93c-36fbc83a3a3c)
+![CustomerDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/bb8b8b89-e9f2-40b8-a4f3-bb4627914748)
+![AccountOperationDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/007621cf-262f-4895-be95-22e75843e908)
+![CreditDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/abf61246-9921-4470-b3f2-3d23342d464e)
+![DebitDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/4c8936f4-3a48-4aa7-b768-7547d4cbb268)
+![TransfertRequestDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/c827b0cd-ccb3-4b1b-b551-f008acf01557)
+![AccountHistoryDTOS](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/d2e5bf13-424e-4686-8e22-644fbd23c950)
+![AccountOperationDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/032a1530-255b-426f-8dc0-4d9dc73ce3fd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

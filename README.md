@@ -49,15 +49,33 @@ Serveur BACKEND
 -->Entities : 
 
 ![Customer](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/8dc16693-291e-481e-8272-87b77296bcc8)
+
+Cette classe "CurrentAccount" est une entité qui représente un compte courant dans l'application. Elle est annotée avec "@Entity" et hérite de la classe "BankAccount". La valeur de discrimination ("CA") spécifiée avec "@DiscriminatorValue" est utilisée pour différencier les enregistrements de comptes courants dans la base de données. Elle inclut également un attribut supplémentaire spécifique aux comptes courants, "overDraft" (découvert autorisé).
+
 ![BankAcocuntEntity](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/177c42cb-be9d-4b00-bd6b-fbca6751b375)
+
+Cette classe "BankAccount" est une entité qui représente un compte bancaire dans l'application. Elle est annotée avec "@Entity" pour être persistée dans la base de données. Elle contient des attributs tels que "balance" (solde du compte), "Date_createdAt" (date de création), "status" (statut du compte) et est associée à un client via la relation "@ManyToOne". De plus, elle est liée à plusieurs opérations de compte via la relation "@OneToMany" et la propriété "mappedBy".
+
 ![SavingAccount](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/f94d4a53-0496-4eef-b4a0-262c617399cb)
+
+Cette classe "SavingAccount" est une entité qui représente un compte d'épargne dans l'application. Elle hérite de la classe "BankAccount" et est annotée avec "@Entity". La valeur de discrimination ("SA") spécifiée avec "@DiscriminatorValue" est utilisée pour distinguer les enregistrements de comptes d'épargne dans la base de données. Elle contient un attribut supplémentaire "interestRate" (taux d'intérêt) spécifique aux comptes d'épargne.
+
 ![CurrentAccount](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/6a26b648-94fc-4970-b67f-9b2df5d2a526)
+
+Cette classe "CurrentAccount" est une entité qui représente un compte courant dans l'application. Elle hérite de la classe "BankAccount" et est annotée avec "@Entity". La valeur de discrimination ("CA") spécifiée avec "@DiscriminatorValue" est utilisée pour distinguer les enregistrements de compte courant dans la base de données. Elle contient un attribut supplémentaire "overDraft" (découvert autorisé) spécifique aux comptes courants.
+
 ![AccountOperationEntity](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/e3688f16-484e-4648-bb2c-cb8ecba18b0d)
+
+Cette classe "AccountOperation" est une entité qui représente une opération de compte dans l'application. Elle est annotée avec "@Entity" et contient des attributs tels que "operationDate" (date de l'opération), "amount" (montant de l'opération), "description" (description de l'opération) et "type" (type d'opération) qui est une énumération de type "OperationType". Elle est associée à un compte bancaire via la relation "@ManyToOne". L'identifiant de l'opération est généré automatiquement avec l'annotation "@GeneratedValue".
 
 -->Enumérations :
 
 ![OperationType](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/72034e64-c43e-46a6-a65f-2c0b5babac5d)
 ![AccountStatut](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/bbb4b34a-2b12-4165-9ff0-0cfc7869fac1)
+
+Le premier code représente une énumération "AccountStatus" qui définit les différents statuts possibles pour un compte bancaire. Les statuts sont "CREATED" (créé), "ACTIVATED" (activé) et "SUSPENDED" (suspendu). Cette énumération est utilisée pour représenter l'état d'un compte bancaire.
+
+Le deuxième code représente une énumération "OperationType" qui définit les types d'opérations possibles pour un compte bancaire. Les types d'opérations sont "DEBIT" (débit) et "CREDIT" (crédit). Cette énumération est utilisée pour indiquer le type d'une opération effectuée sur un compte bancaire.
 
 -->Exceptions :
 
@@ -71,10 +89,22 @@ Serveur BACKEND
 ![BankAccountRep](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/d6ee0161-3589-48e2-b160-a2c936f88358)
 ![AccountOperationRep](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/8c81c981-f478-4637-bd75-59090f721741)
 
+Le premier code représente une classe d'exception "BalanceNotSufficentException" qui est utilisée lorsque le solde d'un compte bancaire n'est pas suffisant pour effectuer une opération. Elle étend la classe "Exception" et prend un message en paramètre pour décrire l'exception.
+
+Le deuxième code représente une classe d'exception "BankAccountNotFoundException" qui est utilisée lorsqu'un compte bancaire n'est pas trouvé. Elle étend également la classe "Exception" et prend un message en paramètre pour décrire l'exception.
+
+Le troisième code représente une classe d'exception "CustomerNotFoundException" qui est utilisée lorsqu'un client n'est pas trouvé. Cette classe étend la classe "Exception" et prend un message en paramètre pour décrire l'exception. Cette exception est une exception surveillée (checked exception) car elle étend directement la classe "Exception".
+
 -->DTOS :
 
 ![BankAccountDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/fb543ac0-1b1a-4318-b508-9c98862b73f8)
+
+Cette classe "BankAccountDTO" est un objet de transfert de données (DTO) utilisé pour transférer les informations d'un compte bancaire entre les couches de l'application. Elle est annotée avec "@Data" pour générer automatiquement les méthodes getters et setters. Elle contient un attribut "type" qui représente le type de compte bancaire.
+
 ![SavingBankAccountDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/3e3cd230-6106-497d-a93c-36fbc83a3a3c)
+
+Cette classe "SavingBankAccountDTO" est un objet de transfert de données (DTO) spécifique à un compte d'épargne. Elle étend la classe "BankAccountDTO" et contient des attributs supplémentaires tels que "id" (identifiant du compte), "balance" (solde du compte), "Date_createdAt" (date de création du compte), "status" (statut du compte) et "interestRate" (taux d'intérêt du compte). Elle contient également un objet "customerDTO" de type "CustomerDTO" qui représente les informations du client associé au compte, ainsi qu'une liste d'objets "accountOperations" de type "AccountOperation" représentant les opérations effectuées sur le compte.
+
 ![CustomerDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/bb8b8b89-e9f2-40b8-a4f3-bb4627914748)
 ![AccountOperationDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/007621cf-262f-4895-be95-22e75843e908)
 ![CreditDTO](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/abf61246-9921-4470-b3f2-3d23342d464e)

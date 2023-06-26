@@ -229,10 +229,31 @@ Ces fonctions permettent de gérer les opérations liées aux clients bancaires 
 ![pom1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/504f3019-a0af-459f-8342-2a2ffab7506e)
 ![pom2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/12601034-b358-4df3-832e-038c62770bd5)
 
+Les dépendances indiquées dans le code XML sont utilisées dans un projet Spring Boot avec des fonctionnalités spécifiques. Voici une brève explication des principales dépendances utilisées :
+
+1-spring-boot-starter-data-jpa: Cette dépendance permet l'intégration de JPA (Java Persistence API) pour l'accès aux données et la gestion des entités.
+
+2-spring-boot-starter-web: Cette dépendance fournit les fonctionnalités nécessaires pour développer des applications web avec Spring Boot, y compris le serveur web embarqué.
+
+3-spring-boot-devtools: Cette dépendance fournit des outils de développement pour le rechargement automatique des modifications et une expérience de développement plus rapide.
+
+4-mysql-connector-j: Cette dépendance permet la connexion à une base de données MySQL en utilisant le connecteur JDBC.
+
+5-lombok: Cette dépendance simplifie le développement en générant automatiquement du code boilerplate tel que les accesseurs et les constructeurs.
+
+6-springdoc-openapi-ui: Cette dépendance permet de générer automatiquement une documentation API basée sur OpenAPI (anciennement Swagger) et fournit une interface utilisateur pour explorer et tester l'API.
+
+7-spring-boot-starter-test: Cette dépendance fournit les outils et les bibliothèques nécessaires pour écrire des tests unitaires et d'intégration dans les applications Spring Boot.
+
+8-hibernate-validator: Cette dépendance fournit la validation des contraintes sur les objets métier en utilisant les annotations de validation de Hibernate.
+
+Ces dépendances sont utilisées pour faciliter le développement d'une application Spring Boot avec des fonctionnalités telles que l'accès aux données, le développement web, la documentation de l'API et la validation des données.
+
 -->Fichier de configuration application.properties :
 
 ![application](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/88bece9d-4757-457d-8c7f-280f3bc7c5b2)
 
+Le code de configuration de l'application Spring Boot que vous avez partagé contient des propriétés essentielles pour la connexion à une base de données MySQL, la gestion du schéma et d'autres paramètres de l'application. Par exemple, la propriété spring.datasource.url définit l'URL de connexion à la base de données, tandis que spring.jpa.hibernate.ddl-auto spécifie le mode de gestion du schéma. De plus, la propriété server.port indique sur quel port le serveur web intégré écoutera les requêtes. Ces propriétés sont cruciales pour garantir une configuration adéquate de l'application et assurer son bon fonctionnement.
 
 -->Main :
 
@@ -241,11 +262,18 @@ Ces fonctions permettent de gérer les opérations liées aux clients bancaires 
 ![main3](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/4b4dd5e0-a0a2-42f2-a650-50025b0a7798)
 ![main4](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/6a9ca9fb-5d81-4a0b-8099-4e6ed807fe39)
 
+Le code fourni est l'implémentation de la classe principale EBankingApplication dans une application Spring Boot. Cette classe contient une méthode main qui démarre l'application. De plus, elle définit deux méthodes commandLineRunner annotées avec @Bean, qui sont exécutées au démarrage de l'application.
+
+La première méthode commandLineRunner utilise le service BankAccountService pour créer des clients, des comptes courants et des comptes d'épargne, et effectue des opérations de crédit et de débit sur ces comptes à des fins de test.
+
+La deuxième méthode start utilise les référentiels CustomerRepository, BankAccountRepository et AccountOperationRepository pour créer des clients, des comptes courants et des comptes d'épargne en utilisant des entités de base de données. Elle effectue également des opérations de crédit et de débit sur les comptes créés.
+
+Ces méthodes CommandLineRunner permettent de pré-remplir la base de données avec des données de test lors du démarrage de l'application. Cela facilite le développement et les tests.
+
 --> Base de donnée MySQL :
 
 ![phpadmin1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/30fc0be7-f871-4167-9e16-f4083e31df70)
 ![phpadmin2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/247fd718-76b5-40ad-a6d3-c98e57896ee0)
-
 
 
 

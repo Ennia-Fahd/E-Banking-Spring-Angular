@@ -274,6 +274,165 @@ Ces méthodes CommandLineRunner permettent de pré-remplir la base de données a
 
 ![phpadmin1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/30fc0be7-f871-4167-9e16-f4083e31df70)
 ![phpadmin2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/247fd718-76b5-40ad-a6d3-c98e57896ee0)
+![phpmyadmin3](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/25686b3a-a4d2-49df-9ddd-3cf2fc581f43)
+
+
+
+                                                        Partie FRONT-END avec ANGULAR
+
+1-Architecture Angular :
+
+![architectureAngular](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/f1e9b884-3381-46c7-ba40-cac36e5ff0f9)
+
+
+2- Strcuture d'un projet Angular :
+
+![structureAngular](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/e45fc1aa-748a-4d98-97ac-8eaae7ed6a62)
+
+
+---Fichier package.json ----
+
+![packagejson](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/6e74d9cc-ca30-4365-9286-accfb22afea9)
+
+---Fichier angular.json ----
+
+![angularjson1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/0ee09d0c-cef0-4116-853b-62740dfe9cae)
+
+---app.component.html ----
+
+![apphtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/59f5964a-16a0-4024-a4eb-ff7370ab9824)
+
+---app.component.ts ----
+
+![appts](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/9eb9f50d-8d85-4757-b17c-7d0142437d00)
+
+---app-module.ts ----
+
+![appmodule](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/23dd02c5-c993-4f2d-8fa9-b094ee9a0644)
+
+---app-routing.module.ts ----
+
+![approute](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/2cc68e64-a1e8-4da7-b263-483d68beb41c)
+
+
+3-Variables d'Environnement :
+
+![environement](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/cdd1cd37-d30c-4670-9086-1bcc9d9e3ee6)
+
+
+4-Models :
+
+![Customer](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/3eb3d3b2-2748-458d-87b9-ae9706e1f041)
+![BankAccount](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/2e59eee2-7161-4548-aa84-efbcc265b2c9)
+![accountdetail](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/0a60757f-6fc7-45de-af0c-29891589fe32)
+![AccountOperation](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/78830dcf-9368-4a3d-883f-493f5f163803)
+
+
+5-Services :
+
+-accounts-service.ts :
+
+![serviceaccount1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/1f20eebf-933f-45bb-9e99-2e89bd98c6c1)
+![serviceaccount2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/83693a9c-8b8e-4a45-bfa7-e1befa9d9e04)
+
+-customer-service.ts
+
+![Customerservice](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/a65fa627-4cd9-4943-b8da-14a71b2f984f)
+
+
+6-Les Composants :
+
+--Explication : 
+
+
+
+-->Navbar :
+
+-navbar.component.html :
+
+![navbarhtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/cd454407-e426-4fd3-8b6f-08fe26073d13)
+
+-->Customers :
+
+-customers.component.html :
+
+![customerhtml1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/410921ef-86d9-4a54-87eb-37eb59654297)
+![customerhtml2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/58e70788-10ce-445f-b11e-7a38c0d7fdc6)
+
+-customers.component.ts :
+
+![customerts1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/fa3f4bca-5361-46dc-ad19-bba9e07f8441)
+![customerts2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/41756e54-cd26-44c6-a8e1-3a4265ee29f6)
+
+-->New-Customer :
+
+-new-customer.component.html :
+
+![new-customerhtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/50ab5e39-acea-4774-b664-78a43a686c2b)
+
+-new-customer.component.ts :
+
+![new-customerts](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/8c992395-4e2d-4d07-a4fd-773435665b16)
+
+-->Accounts :
+
+-accounts.component.html :
+
+![accounthtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/76139e20-4c90-4256-853f-faf7ae4bd2f1)
+![accounthtml2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/db57f02b-bf88-4c8c-b054-5154f1a831b6)
+![accounthtml3](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/27b933b4-9c07-48ee-8781-b9d4a38b52a4)
+
+-accounts.component.ts :
+
+![accountts](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/9e1f0bf1-d9aa-408c-be51-ce528373eb2f)
+![accountss](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/8561522f-a66f-44b5-85db-833c9e5ffcec)
+![accountts2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/f95884b9-15c9-4a6e-b73d-6a23fa92ad90)
+
+-->Customer-Accounts :
+
+---customer-accounts.component.html :
+
+![accountcustomerhtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/ccd0fceb-ffac-4148-87ad-18a55707f459)
+
+---customer-accounts.component.ts :
+
+![accounts](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/a6bbcb8e-4f4d-4a2e-9ef1-d5ac056a4af1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

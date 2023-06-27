@@ -284,49 +284,93 @@ Ces méthodes CommandLineRunner permettent de pré-remplir la base de données a
 
 ![architectureAngular](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/f1e9b884-3381-46c7-ba40-cac36e5ff0f9)
 
+Dans un projet Angular, l'architecture est basée sur le modèle MVVM (Modèle-Vue-VueModèle) qui permet une séparation claire des responsabilités.
+
+-Le modèle (Model) représente les données de l'application, généralement sous forme d'objets ou de services.
+-La vue (View) correspond à la partie visible de l'interface utilisateur, définie à l'aide de fichiers HTML et de feuilles de style CSS.
+-Le contrôleur (VueModèle) agit comme une couche intermédiaire entre le modèle et la vue, gérant les interactions utilisateur et la logique métier.
+Angular utilise également des composants pour encapsuler la logique et la présentation d'une partie spécifique de l'interface utilisateur, ainsi que des services pour partager des fonctionnalités et des données entre différents composants.
+
+L'architecture d'un projet Angular favorise la modularité, la réutilisabilité du code et la séparation des préoccupations, ce qui facilite le développement, la maintenance et l'évolutivité de l'application.
+
 
 2- Strcuture d'un projet Angular :
 
 ![structureAngular](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/e45fc1aa-748a-4d98-97ac-8eaae7ed6a62)
 
+La structure d'un projet Angular typique comprend plusieurs répertoires et fichiers :
+
+-Le répertoire "src" : Il contient le code source de l'application Angular.
+-"app" : Ce répertoire contient les composants, services, modules et autres fichiers spécifiques à l'application.
+-"assets" : Ce répertoire contient les fichiers statiques tels que les images, les fichiers CSS, etc.
+-"environments" : Ce répertoire contient des fichiers de configuration pour différents environnements (développement, production, etc.).
+-"index.html" : C'est le point d'entrée de l'application, où l'application Angular est chargée dans le navigateur.
+-Le fichier "angular.json" : Il s'agit du fichier de configuration global de l'application Angular. Il spécifie les paramètres de construction, de compilation et de déploiement de l'application.
+-Le fichier "tsconfig.json" : Il contient la configuration TypeScript pour l'application.
+-Les fichiers de services : Les services Angular sont généralement définis dans des fichiers séparés et fournissent des fonctionnalités partagées et des opérations de traitement des données.
 
 ---Fichier package.json ----
 
 ![packagejson](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/6e74d9cc-ca30-4365-9286-accfb22afea9)
 
+Le fichier "package.json" : Il spécifie les dépendances du projet et contient des scripts pour les tâches courantes, telles que la compilation et le lancement de l'application.
+
 ---Fichier angular.json ----
 
 ![angularjson1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/0ee09d0c-cef0-4116-853b-62740dfe9cae)
+
+Le fichier "angular.json" est un fichier de configuration essentiel dans un projet Angular. Il définit les paramètres de construction, de compilation et de déploiement de l'application. Dans cet exemple, on a intégré bootstrap 5 et ses icons dans notre prôjet en modifiant l'attribut "styles" et "scripts"
+Le fichier "package.json" : Il spécifie les dépendances du projet et contient des scripts pour les tâches courantes, telles que la compilation et le lancement de l'application.
 
 ---app.component.html ----
 
 ![apphtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/59f5964a-16a0-4024-a4eb-ff7370ab9824)
 
+Le fichier "app.component.html" est un fichier de modèle (view) dans un projet Angular. Il contient le code HTML qui définit la structure et la mise en page du composant principal de l'application. Vous pouvez y inclure des balises HTML, des directives Angular, des liaisons de données et des événements pour rendre le contenu dynamique.
+
 ---app.component.ts ----
 
 ![appts](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/9eb9f50d-8d85-4757-b17c-7d0142437d00)
+
+Le fichier "app.component.ts" est le fichier de composant TypeScript correspondant au fichier HTML mentionné ci-dessus. Il contient la logique du composant, les propriétés, les méthodes et les interactions avec les services et les autres composants. Vous pouvez définir les données, les fonctions, les cycles de vie du composant et gérer les événements utilisateur à l'intérieur de ce fichier. Il sert également de point d'entrée principal pour le composant principal de l'application.
 
 ---app-module.ts ----
 
 ![appmodule](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/23dd02c5-c993-4f2d-8fa9-b094ee9a0644)
 
+Le fichier "app.module.ts" : C'est le module principal de l'application qui importe et configure tous les modules, services et composants nécessaires à l'application.
+
 ---app-routing.module.ts ----
 
 ![approute](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/2cc68e64-a1e8-4da7-b263-483d68beb41c)
 
+Le fichier "app-routing.module.ts" est un module de routage dans un projet Angular. Il permet de définir les routes de l'application, c'est-à-dire les associations entre les URL et les composants correspondants. Ce module utilise le service RouterModule fourni par Angular pour gérer la navigation entre les différentes vues de l'application.
+
+Cette structure de projet fournit une organisation claire du code et facilite la maintenance, la réutilisabilité et l'extension de l'application Angular.
 
 3-Variables d'Environnement :
 
 ![environement](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/cdd1cd37-d30c-4670-9086-1bcc9d9e3ee6)
 
+Le fichier environment.ts définit les paramètres de configuration pour l'environnement de développement, avec la variable backendHost spécifiant l'URL du serveur backend local. Le commentaire suggère d'importer un fichier pour faciliter le débogage en mode développement, mais il est commenté par défaut pour éviter les impacts de performance en production.
 
 4-Models :
 
 ![Customer](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/3eb3d3b2-2748-458d-87b9-ae9706e1f041)
+
+L'interface Customer définit la structure d'un objet représentant un client, comprenant les propriétés id, name et email.
+
 ![BankAccount](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/2e59eee2-7161-4548-aa84-efbcc265b2c9)
-![accountdetail](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/0a60757f-6fc7-45de-af0c-29891589fe32)
+
+L'interface BankAccount définit la structure d'un objet représentant un compte bancaire, comprenant les propriétés id, type, date_createdAt, balance, status, overDraft et interestRate.
+
 ![AccountOperation](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/78830dcf-9368-4a3d-883f-493f5f163803)
 
+L'interface AccountOperation définit la structure d'un objet représentant une opération sur un compte bancaire, comprenant les propriétés id, operationDate, amount, type et description.
+
+![accountdetail](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/0a60757f-6fc7-45de-af0c-29891589fe32)
+
+L'interface AccountDetails définit la structure d'un objet représentant les détails d'un compte bancaire, comprenant les propriétés accountId, balance, currentPage, totalPages, pageSize et accountOperationDTOS, où accountOperationDTOS est un tableau d'objets AccountOperation.
 
 5-Services :
 
@@ -335,22 +379,35 @@ Ces méthodes CommandLineRunner permettent de pré-remplir la base de données a
 ![serviceaccount1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/1f20eebf-933f-45bb-9e99-2e89bd98c6c1)
 ![serviceaccount2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/83693a9c-8b8e-4a45-bfa7-e1befa9d9e04)
 
+Le service AccountsService est injectable et utilise le module HttpClient pour effectuer des requêtes HTTP. Il contient des méthodes pour récupérer les détails d'un compte, effectuer des opérations de débit, de crédit et de transfert d'argent, ainsi que pour récupérer les comptes d'un client spécifique. Les URL des requêtes sont basées sur l'environnement backendHost défini dans environment.ts. Voici quelque exemple de service pour les comptes bancaires :
+
+-La méthode getAccount récupère les détails d'un compte en utilisant son identifiant, le numéro de page et la taille de la page, en effectuant une requête GET vers l'API backend.
+-Les méthodes debit, credit et transfer effectuent respectivement des opérations de débit, de crédit et de transfert d'argent en envoyant les données nécessaires (compte source, compte destination, montant et description) via des requêtes POST à l'API backend.
+
 -customer-service.ts
 
 ![Customerservice](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/a65fa627-4cd9-4943-b8da-14a71b2f984f)
 
+Le service CustomerService est un injectable dans Angular utilisé pour interagir avec les données des clients. Il utilise le module HttpClient pour effectuer des requêtes HTTP vers l'API backend et fournit des méthodes telles que getCustomers pour récupérer la liste de tous les clients, searchCustomers pour rechercher des clients en fonction d'un mot-clé, saveCustomer pour enregistrer un nouveau client, et deleteCustomer pour supprimer un client existant. Voici quelque exemple de service pour les clients :
+
+-La méthode getCustomers récupère la liste de tous les customers en effectuant une requête GET à l'API backend.
+-La méthode searchCustomers permet de rechercher des customers en fonction d'un mot-clé donné.
+-La méthode saveCustomer enregistre un nouveau customer en envoyant les données via une requête POST.
+La méthode deleteCustomer supprime un customer spécifié en effectuant une requête DELETE à l'API backend.
 
 6-Les Composants :
 
 --Explication : 
 
-
+Chaque composant Angular a généralement un fichier TypeScript (.ts), un fichier de modèle HTML (.html) et un fichier de style CSS (.css) correspondants.
 
 -->Navbar :
 
 -navbar.component.html :
 
 ![navbarhtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/cd454407-e426-4fd3-8b6f-08fe26073d13)
+
+Ce code représente une barre de navigation (navbar) pour une application de banque en ligne. Elle comporte un logo "E-Banking" et plusieurs liens de navigation. Les liens incluent une page d'accueil, une page pour afficher les comptes (Accounts), un menu déroulant pour les clients (Customers) avec des options pour rechercher des clients (Search customers) et créer un nouveau client (New customer), ainsi qu'un lien désactivé (Disabled). La barre de navigation est stylisée avec un thème sombre (navbar-dark bg-dark).
 
 -->Customers :
 
@@ -359,10 +416,20 @@ Ces méthodes CommandLineRunner permettent de pré-remplir la base de données a
 ![customerhtml1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/410921ef-86d9-4a54-87eb-37eb59654297)
 ![customerhtml2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/58e70788-10ce-445f-b11e-7a38c0d7fdc6)
 
+Ce code représente une vue dans une application Angular qui affiche une liste de clients. Il comprend un formulaire de recherche permettant de filtrer les clients en fonction d'un mot-clé. Les informations des clients, telles que leur ID, nom et email, sont affichées dans un tableau. Des boutons sont également présents pour supprimer un client ou accéder à ses comptes. En cas d'erreur lors du chargement des données ou en cas de chargement en cours, des messages appropriés sont affichés à l'utilisateur.
+
 -customers.component.ts :
 
 ![customerts1](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/fa3f4bca-5361-46dc-ad19-bba9e07f8441)
 ![customerts2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/41756e54-cd26-44c6-a8e1-3a4265ee29f6)
+
+Ce code représente le composant Angular "CustomersComponent". Il utilise le service CustomerService pour récupérer la liste des clients à afficher. Il comprend des méthodes pour rechercher et supprimer un client, ainsi que pour rediriger vers la page des comptes d'un client spécifique. Le composant utilise également FormBuilder pour créer un formulaire de recherche et Router pour la navigation entre les pages.
+
+-La fonction handleSearchCustomers() est appelée lorsque l'utilisateur soumet le formulaire de recherche. Elle récupère le mot-clé saisi par l'utilisateur, appelle la méthode searchCustomers() du service CustomerService pour effectuer la recherche, et affiche les résultats dans la liste des clients. En cas d'erreur, elle affiche un message d'erreur.
+
+-La fonction handleDeleteCustomer(c: Customer) est appelée lorsque l'utilisateur clique sur le bouton de suppression d'un client. Elle affiche une boîte de confirmation, puis appelle la méthode deleteCustomer() du service CustomerService pour supprimer le client spécifié. Si la suppression est réussie, elle met à jour la liste des clients en retirant le client supprimé.
+
+-La fonction handleCustomerAccounts(customer: Customer) est appelée lorsque l'utilisateur clique sur le bouton "Accounts" pour afficher les comptes d'un client spécifique. Elle utilise le Router pour naviguer vers la page des comptes du client en passant les informations du client en tant que paramètre.
 
 -->New-Customer :
 
@@ -370,9 +437,13 @@ Ces méthodes CommandLineRunner permettent de pré-remplir la base de données a
 
 ![new-customerhtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/50ab5e39-acea-4774-b664-78a43a686c2b)
 
+Ce code représente un formulaire pour créer un nouveau client. Il comporte des champs pour saisir le nom et l'e-mail du client, ainsi qu'une validation des champs avec des messages d'erreur affichés en cas de saisie incorrecte. Lorsque le formulaire est soumis, la fonction handleSaveCustomer() est appelée. Un bouton "Save" est affiché et est désactivé tant que le formulaire n'est pas valide. Le formulaire est affiché à l'intérieur d'une carte stylisée.
+
 -new-customer.component.ts :
 
 ![new-customerts](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/8c992395-4e2d-4d07-a4fd-773435665b16)
+
+Ce code représente le composant Angular pour la création d'un nouveau client. Il initialise un formulaire réactif (newCustomerFormGroup) avec des champs de nom et d'e-mail du client, qui sont soumis à des validations. Lorsque le formulaire est soumis, la fonction handleSaveCustomer() est appelée pour enregistrer le nouveau client en utilisant le service CustomerService. En cas de succès, une alerte est affichée et l'utilisateur est redirigé vers la liste des clients. En cas d'erreur, un message est affiché dans la console.
 
 -->Accounts :
 
@@ -382,11 +453,27 @@ Ces méthodes CommandLineRunner permettent de pré-remplir la base de données a
 ![accounthtml2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/db57f02b-bf88-4c8c-b054-5154f1a831b6)
 ![accounthtml3](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/27b933b4-9c07-48ee-8781-b9d4a38b52a4)
 
+Ce code représente une vue Angular pour la gestion des comptes bancaires. Il est composé de deux colonnes.
+
+Dans la première colonne, il y a un formulaire de recherche de compte. L'utilisateur peut saisir un identifiant de compte et cliquer sur le bouton de recherche pour afficher les détails du compte. En dessous du formulaire de recherche, il y a un espace réservé pour afficher les éventuelles erreurs ou un message de chargement. Si les détails du compte sont disponibles, ils sont affichés, y compris l'identifiant du compte, le solde et un tableau des opérations associées au compte. En bas de la première colonne, il y a une pagination pour naviguer entre les pages d'opérations.
+
+Dans la deuxième colonne, il y a un formulaire pour effectuer des opérations sur le compte sélectionné. L'utilisateur peut choisir le type d'opération (débit, crédit ou virement), saisir le montant et la description de l'opération. S'il choisit le type de virement, il doit également saisir le compte de destination. En cliquant sur le bouton "Save Operation", l'opération est enregistrée.
+
+Ce code utilise les directives structurelles *ngIf pour conditionner l'affichage des éléments en fonction des états des observables et des valeurs des formulaires. Il utilise également les directives de liaison de données formControlName pour lier les champs de saisie à des contrôles de formulaire réactif.
+
 -accounts.component.ts :
 
 ![accountts](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/9e1f0bf1-d9aa-408c-be51-ce528373eb2f)
 ![accountss](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/8561522f-a66f-44b5-85db-833c9e5ffcec)
 ![accountts2](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/f95884b9-15c9-4a6e-b73d-6a23fa92ad90)
+
+Ce code représente un composant Angular appelé AccountsComponent qui gère la logique et l'affichage des comptes bancaires.
+Il utilise les imports pour les fonctionnalités nécessaires, notamment la création de formulaires, la gestion des erreurs avec RxJS, et les modèles de compte.
+Le composant comprend des propriétés pour les formulaires, la pagination, les observables, les messages d'erreur, ainsi que des méthodes pour rechercher des comptes, passer à la page suivante et effectuer des opérations sur les comptes (débit, crédit, transfert).
+
+-handleSearchAccount() récupère l'ID du compte à partir du formulaire, appelle le service AccountsService pour obtenir les détails du compte correspondant, gère les erreurs potentielles et assigne les résultats à la variable accountObservable.
+
+-handleAccountOperation() récupère les valeurs des champs du formulaire d'opération, appelle les fonctions correspondantes du service AccountsService en fonction du type d'opération sélectionné (débit, crédit ou transfert), affiche une alerte en cas de succès et réinitialise le formulaire.
 
 -->Customer-Accounts :
 
@@ -394,9 +481,17 @@ Ces méthodes CommandLineRunner permettent de pré-remplir la base de données a
 
 ![accountcustomerhtml](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/ccd0fceb-ffac-4148-87ad-18a55707f459)
 
+Le code HTML représente une interface utilisateur qui affiche les comptes clients d'un certain client. Le nom du client est affiché en tant qu'en-tête. Les détails des comptes client sont affichés dans un tableau avec les colonnes suivantes : ID du compte, statut, type de compte, date de création, solde et éventuellement taux d'intérêt ou découvert autorisé.Les comptes clients sont récupérés de manière asynchrone à l'aide de la directive *ngFor, qui itère sur chaque compte et affiche ses attributs dans les cellules correspondantes du tableau.Si un compte a un taux d'intérêt, il est affiché dans une cellule distincte. De même, si un compte a un découvert autorisé, il est également affiché dans une cellule distincte.L'ensemble de l'interface utilisateur est encapsulé dans une div avec la classe "container" pour le style et la mise en page.
+
 ---customer-accounts.component.ts :
 
 ![accounts](https://github.com/Ennia-Fahd/E-Banking/assets/92646945/a6bbcb8e-4f4d-4a2e-9ef1-d5ac056a4af1)
+
+Le code représente un composant Angular appelé CustomerAccountsComponent qui gère les comptes d'un client.Il importe les dépendances nécessaires, y compris le modèle Customer et BankAccount, ainsi que le service AccountsService pour récupérer les comptes.Le composant utilise l'injection de dépendances pour obtenir une instance du service AccountsService, ainsi que les instances de ActivatedRoute et Router.
+
+-La fonction handleCustomerAccounts2() utilise le service AccountsService pour récupérer les comptes du client en utilisant l'identifiant. Elle gère également les erreurs potentielles en utilisant l'opérateur catchError() pour capturer les erreurs et les stocker dans la variable errorMessage.Les comptes du client sont stockés dans la variable customerAccount, qui est un Observable contenant un tableau de BankAccount, et peuvent être utilisés dans le template associé pour afficher les informations des comptes.
+
+
 
 
 
